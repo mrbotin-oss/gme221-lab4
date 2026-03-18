@@ -50,3 +50,22 @@
 - Changing the attributes result in a different Moran’s I values and interpretations.
 6. Why Moran’s I requires both a spatial weights matrix and an attribute variable. 
 - Attribute variable provides the value needed for comparison, without the attribute there is nothing to analyze. While spatial weights matrix defines who is the neighbor which defines the relationships.
+
+# Required Reflection - F. Interpreting Local Spatial Autocorrelation
+1. What is the difference between Global Moran’s I and Local Moran’s I?
+- Moran's I comes in two types, the Global and Local. Global Moran's I measures spatial autocorrelation for the entire dataset. It gives one value that summarizes whether the data is clustered, dispersed, or random. While, Local Moran’s I measures spatial autocorrelation at the individual parcel level. It identifies specific locations where clustering or outliers occur.
+2. How are hotspots and coldspots identified using Local Moran’s I?
+- Hotspots and coldspots are identified using both the Local Moran’s I value and the p-value. 
+- Hotspot are high values surrounded by high values. Their Local Moran's I should  be greater than zero and p-value is less than 0.05. 
+- Coldspot are low values surrounded by low values. Their Local Moran's I should be less than zero and p-value is less than 0.05.
+3. Where do hotspots appear in your dataset? 
+- Hotspot which are the red parcels are mainly concentrated in the central portion of the map, the possible explanation for this is that these areas are likely more developed and located near main roads or accesible areas that may have higher land demand or better infrastructure.
+4. Where do coldspots appear in your dataset?
+-  Blue parcels are the coldspots which are mostly found in the lower right side of the map and are scattered near the edges. These areas may be less developed and farther from main road which means lower economic activity that may result in clusters of lower parcel values.
+5. Did you observe any spatial outliers? 
+- A spatial outlier occurs when a parcel has a value very different from its neighbors. There are parcels that are among the red parcels and vice versa, which means that a high value parcel is surrounded by a low value neighbor and also vice versa. The possible reason for this is the data may be inconsistent or there's a suddden change of land value or there is a unique landuse for that parcel.
+6. How does changing the spatial weights method affect Local Moran’s I results? 
+- Hotspot and coldspot locations can change when using a different spatial weights method. This can make our cluster smaller or larger or a few hotspots/coldspots may appear or disappear.
+- Changing the parameter of the spatial weights affect the result of Local Moran's I. After increasing the threshold for our Distance, more parcels are defined as hotspot. 
+7. How does changing the attribute affect the spatial clusters?
+- Changing the attribute changes the spatial clusters because each variable has a different value distribution, which affects how parcels relate to their neighbors in Local Moran’s I analysis.
