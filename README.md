@@ -36,3 +36,17 @@
 - Among the three methods, only contiguity weights remain consistent because they do not rely on adjustable parameters. Instead, they are based purely on the geometry of the parcels. This preserves the true geographic structure of the dataset, making contiguity weights the most appropriate method for representing spatial relationships between parcels.
 6. Why is it important to visualize spatial weights before computing Moran’s I? 
 - Visualizing spatial weights is important because it ensures that the neighborhood structure is correct before analysis. By visualizing the graph, errors in connectivity can be detected early, preventing incorrect conclusions in spatial statistics.
+
+# Required Reflection - E. Global Autocorrelation 
+1. What does positive Moran’s I indicate?
+- ass_ass_va shows a slightly higer Moran's I and a positive Moran’s I indicates spatial clustering, meaning parcels with similar values (high or low) are located near each other.
+2. Why is the p-value required for interpretation? 
+- The p-value is needed to determine if the result is statistically significant.
+3. What would Moran’s I near zero suggest? 
+- A Moran's I near zero suggest a random spatial pattern, meaning there is no clear clustering or dispersion in the data.
+4. What is the role of the attribute in computing Moran’s I?
+- The choice of attribute matters because different attributes have different spatial patterns. When processing the same attribute, ass_ass_va shows a stronger clustering compare to ass_market that are a bit more spread out.
+5. How the spatial autocorrelation result might change when a different attribute is analyzed. 
+- Changing the attributes result in a different Moran’s I values and interpretations.
+6. Why Moran’s I requires both a spatial weights matrix and an attribute variable. 
+- Attribute variable provides the value needed for comparison, without the attribute there is nothing to analyze. While spatial weights matrix defines who is the neighbor which defines the relationships.
